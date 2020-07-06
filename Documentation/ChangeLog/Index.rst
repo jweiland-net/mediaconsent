@@ -11,6 +11,12 @@
 ChangeLog
 =========
 
+Version 0.1.8
+    - Checked for compatibility with TYPO3 10.4
+    - Bugfix in fluid templates
+
+    Thanks to Albrecht Köhnlein who made pull requests concerning the bugs and TYPO3 10!
+
 Version 0.1.7
 	- Checked for compatibility with TYPO3 9.5.7
 	- Included documentation again

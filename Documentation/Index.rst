@@ -12,19 +12,19 @@ Mediaconsent Extension
 
 
 :Version:
-   0.1.7
+   0.1.8
 
 :Language:
    en
 
 :Copyright:
-   2018-2019 Stabsstelle Kommunikation EKvW
+   2018-2020 Stabsstelle Kommunikation EKvW
 
 :Author:
    Christoph Roth
 
 :Email:
-   christoph.roth@lka.ekvw.de
+   christoph.roth@ekvw.de
 
 :License:
    This document is published under the Open Publication License

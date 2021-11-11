@@ -1,11 +1,10 @@
 {
-    "name": "arbkomekvw/mediaconsent",
+    "name": "jweiland/mediaconsent",
     "type": "typo3-cms-extension",
     "description": "Extension loads content only if the user agrees.",
-    "homepage": "https://github.com/abkekvw/mediaconsent",
+    "homepage": "https://github.com/jweiland-net/mediaconsent",
     "keywords": [
         "TYPO3 CMS",
-        "ekvw",
         "DSGVO",
         "GDPR",
         "front-end"
@@ -13,19 +12,20 @@
     "license": ["GPL-2.0-or-later"],
     "authors": [
         {
-            "name": "Christoph Roth",
-            "email": "christoph.roth@lka.ekvw.de",
-            "role": "Developer",
-            "homepage": "http://www.ekvw.de/kommunikation/"
+            "name": "Pascal Rinker",
+            "email": "projects@jweiland.net",
+            "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=7.0",
-        "typo3/cms-core": "^9.5 || ^10 || ^11"
+        "typo3/cms-core": "^10.4 || ^11.5"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
     },
     "autoload": {
         "psr-4": {
-            "ArbkomEKvW\\mediaconsent\\": "Classes/"
+            "JWeiland\\Mediaconsent\\": "Classes/"
         }
     },
     "replace": {

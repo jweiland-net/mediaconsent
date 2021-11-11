@@ -7,7 +7,7 @@ tt_content {
 
     layoutRootPaths {
       10 = EXT:mediaconsent/Resources/Private/Layouts
-    } 
+    }
     partialRootPaths {
       10 = EXT:mediaconsent/Resources/Private/Partials
     }
@@ -17,7 +17,7 @@ tt_content {
 
     templateName = Mediaconsent_cns.html
     dataProcessing {
-      1 = ArbkomEKvW\mediaconsent\DataProcessing\MediaconsentCnsProcessor
+      1 = JWeiland\Mediaconsent\DataProcessing\MediaconsentCnsProcessor
       1 {
           reloadPageType = {$plugin.tx_mediaconsent.settings.reloadPageType}
           cnProviders = Facebook,Instagram,Twitter,YouTube,Vimeo,SoundCloud,Other
@@ -59,6 +59,6 @@ rldPage {
 page.includeJSFooterlibs.jquery = EXT:mediaconsent/Resources/Public/js/jquery.min.js
 [end]
 
-# Include JavaScript functions for reloading Content Element. 
+# Include JavaScript functions for reloading Content Element.
 # Assumes "page" as name for top level PAGE Object
 page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/js/tx_mediaconsent.js

@@ -7,10 +7,10 @@ Links
 -----
 
 :TER:
-	https://typo3.org/extensions/repository/view/mediaconsent
+	https://extensions.typo3.org/extension/mediaconsent
 
 :Git Repository:
-	https://github.com/abkekvw/mediaconsent
+	https://github.com/jweiland-net/mediaconsent
 
 :Contact:
-	christoph.roth@lka.ekvw.de
+	projects@jweiland.net

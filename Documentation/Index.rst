@@ -12,24 +12,25 @@ Mediaconsent Extension
 
 
 :Version:
-   0.1.8
+   1.0.0
 
 :Language:
    en
 
 :Copyright:
    2018-2020 Stabsstelle Kommunikation EKvW
+   2021 jweiland.net
 
 :Author:
-   Christoph Roth
+   Pascal Rinker
 
 :Email:
-   christoph.roth@ekvw.de
+   projects@jweiland.net
 
 :License:
    This document is published under the Open Publication License
    available from http://www.opencontent.org/openpub/
-   
+
 
    The content of this document is related to TYPO3,
    a GNU/GPL CMS/Framework available from `www.typo3.org <https://typo3.org/>`__.
@@ -45,6 +46,5 @@ Mediaconsent Extension
    User/Index
    Administrator/Index
    KnownProblems/Index
-   ToDoList/Index
    ChangeLog/Index
    Links

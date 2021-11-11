@@ -1,7 +1,7 @@
 # mediaconsent
 TYPO3 Extension
 
-[View documentation in detail](https://docs-mediaconsent.ekvw.net)
+[View documentation in detail](https://docs.typo3.org/p/jweiland/mediaconsent/master/en-us/)
 
 This extension loads HTML content only after the user has clicked on a short note expressing his/her agreement to see it.
 

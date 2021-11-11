@@ -14,4 +14,4 @@ Known Problems
 Reporting bugs
 ^^^^^^^^^^^^^^
 
-Bugs can be reported to christoph.roth@lka.ekvw.de
+Bugs can be reported and reviewed via `GitHub <https://github.com/jweiland-net/mediaconsent/issues>`__.

@@ -18,8 +18,7 @@ Mediaconsent Extension
    en
 
 :Copyright:
-   2018-2020 Stabsstelle Kommunikation EKvW
-   2021 jweiland.net
+   jweiland.net
 
 :Author:
    Pascal Rinker

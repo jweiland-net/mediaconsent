@@ -43,7 +43,7 @@ Screenshots
 
 .. figure:: ../Images/content_activated.png
    :width: 500px
-   :alt: Twitter content activated
+   :alt: Vimeo content activated
 
    After clicking to agree, content is being loaded and displayed
 

@@ -11,6 +11,13 @@
 ChangeLog
 =========
 
+Version 1.0.0
+  The maintainer has changed. The extension development will be continued by jweiland.net.
+
+  - New composer package name `jweiland/mediaconsent`
+  - First Release that supports TYPO3 v11 LTS
+  - Support usage of sys folders e.g. for news with content elements
+
 Version 0.1.8
     - Checked for compatibility with TYPO3 10.4
     - Bugfix in fluid templates

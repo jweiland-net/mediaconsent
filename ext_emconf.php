@@ -1,5 +1,4 @@
 <?php
-// Extension icon designed by dDara from Flaticon.com
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Media Consent',
     'description' => 'Extension loads content only if the user agrees.',

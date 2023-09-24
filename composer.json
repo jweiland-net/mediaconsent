@@ -23,6 +23,9 @@
     "require-dev": {
         "roave/security-advisories": "dev-latest"
     },
+	"replace": {
+		"typo3-ter/mediaconsent": "self.version"
+	},
     "autoload": {
         "psr-4": {
             "JWeiland\\Mediaconsent\\": "Classes/"

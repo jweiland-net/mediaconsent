@@ -1,7 +1,7 @@
 {
     "name": "jweiland/mediaconsent",
     "type": "typo3-cms-extension",
-    "description": "Extension loads content only if the user agrees.",
+    "description": "This TYPO3 extension makes sure that content is only loaded if the user agrees cookie consent",
     "homepage": "https://github.com/jweiland-net/mediaconsent",
     "keywords": [
         "TYPO3 CMS",
@@ -10,22 +10,24 @@
         "front-end"
     ],
     "license": ["GPL-2.0-or-later"],
-    "authors": [
-        {
-            "name": "Pascal Rinker",
-            "email": "projects@jweiland.net",
-            "role": "Developer"
-        }
-    ],
+	"authors": [
+		{
+			"name": "Stefan Froemken",
+			"email": "sfroemken@jweiland.net",
+			"role": "Lead Developer"
+		},
+		{
+			"name": "Hoja Mustaffa Abdul Latheef",
+			"email": "hlatheef@jweiland.net",
+			"role": "Senior Developer"
+		}
+	],
     "require": {
-        "typo3/cms-core": "^10.4 || ^11.5"
+        "typo3/cms-core": "^12.4"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest"
     },
-	"replace": {
-		"typo3-ter/mediaconsent": "self.version"
-	},
     "autoload": {
         "psr-4": {
             "JWeiland\\Mediaconsent\\": "Classes/"

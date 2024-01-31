@@ -1,7 +1,8 @@
 <?php
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 // Adds the content element to the "Type" dropdown
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
+ExtensionManagementUtility::addPlugin(
     [
         'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:mediaconsent_cns.wizard.title',
         'mediaconsent_cns',
@@ -23,38 +24,38 @@ $tempColumns = [
                         [
                             0 =>
                                 [
-                                    0 => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.0',
-                                    1 => '1',
+                                    'label' => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.0',
+                                    'value' => '1',
                                 ],
                             1 =>
                                 [
-                                    0 => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.1',
-                                    1 => '2',
+                                    'label' => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.1',
+                                    'value' => '2',
                                 ],
                             2 =>
                                 [
-                                    0 => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.2',
-                                    1 => '3',
+                                    'label' => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.2',
+                                    'value' => '3',
                                 ],
                             3 =>
                                 [
-                                    0 => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.3',
-                                    1 => '4',
+                                    'label' => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.3',
+                                    'value' => '4',
                                 ],
                             4 =>
                                 [
-                                    0 => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.4',
-                                    1 => '5',
+                                    'label' => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.4',
+                                    'value' => '5',
                                 ],
                             5 =>
                                 [
-                                    0 => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.5',
-                                    1 => '6',
+                                    'label' => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.5',
+                                    'value' => '6',
                                 ],
                             6 =>
                                 [
-                                    0 => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.6',
-                                    1 => '7',
+                                    'label' => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider.I.6',
+                                    'value' => '7',
                                 ],
                         ],
                 ],
@@ -62,7 +63,7 @@ $tempColumns = [
             'label'   => 'LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:tt_content.mediaconsent_smcprovider',
         ],
 ];
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content',
+ExtensionManagementUtility::addTCAcolumns('tt_content',
     $tempColumns);
 
 

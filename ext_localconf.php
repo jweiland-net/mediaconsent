@@ -1,15 +1,10 @@
 <?php
-defined('TYPO3_MODE') || die('Access denied.');
 
-// Register content element icons
-$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-$iconRegistry->registerIcon(
-    'tx_mediaconsent_cns',
-    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-    [
-        'source' => 'EXT:mediaconsent/Resources/Public/Icons/Extension.svg',
-    ]
-);
+declare(strict_types=1);
+
+if (!defined('TYPO3')) {
+    die('Access denied.');
+}
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
     '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mediaconsent/Configuration/PageTS/PageTSConfig.tsconfig">'

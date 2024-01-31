@@ -1,0 +1,2 @@
+# Add mediaconsent_cns to new content element wizard
+@import 'EXT:service_bw2/Configuration/TSconfig/PageTSConfig.tsconfig'

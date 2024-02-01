@@ -13,6 +13,8 @@ Version 2.0.0
 *   TYPO3 12 LTS Support
 *   Dropped lower version compatibilities
 *   All deprecated calls replaced
+*   Removed jQuery from TypoScript and rewrite the implementation with vanilla
+    JavaScript
 
 Version 1.0.0
 =============

@@ -59,11 +59,6 @@ rldPage {
   }
 }
 
-# Include jQuery. Assumes "page" as name for top level PAGE Object
-[{$plugin.tx_mediaconsent.settings.loadJQuery} == 1]
-  page.includeJSFooterlibs.jquery = EXT:mediaconsent/Resources/Public/js/jquery.min.js
-[end]
-
 # Include JavaScript functions for reloading Content Element.
 # Assumes "page" as name for top level PAGE Object
 page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/js/tx_mediaconsent.js

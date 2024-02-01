@@ -46,10 +46,8 @@ Editing Constants
 =================
 
 .. figure:: ../Images/editing_constants.png
-   :alt: Constants for jQuery and more
+   :alt: Constants
 
-   Constants for jQuery and the reload page type
-
-To disable the include of this extension's own jQuery file, you may use the constant editor and set the "loadJQuery" constant to 0. This is for the case that you are having jQuery in your setup and don't need it included twice.
+   Constants for the reload page type
 
 Another constant (reloadPageType) deals with the very rare case that you already use a pagetype of 122 somewhere in your typoscript configuration. Then you can change it here.

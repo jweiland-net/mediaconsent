@@ -25,20 +25,18 @@ class SessionUtility
 
     public static function setFrontendSessionData(ServerRequestInterface $request, string $key, array $data): void
     {
-        $userSession = self::getFrontendUserAuthentication($request)->getSession();
-        $userSession->set($key, $data);
-        self::storeFrontendSessionData($request);
+        $frontendUser = self::getFrontendUserAuthentication($request);
+        if ($frontendUser) {
+            $userSession = $frontendUser->getSession();
+            $userSession->set($key, $data);
+            $frontendUser->storeSessionData();
+        }
     }
 
     protected static function getFrontendUserAuthentication(ServerRequestInterface $request): ?FrontendUserAuthentication
     {
         $authUser = $request->getAttribute(self::FE_USER_ATTRIBUTE);
         return $authUser instanceof FrontendUserAuthentication ? $authUser : null;
-    }
-
-    protected static function storeFrontendSessionData(ServerRequestInterface $request): void
-    {
-        self::getFrontendUserAuthentication($request)->storeSessionData();
     }
 
     protected static function getFrontendCookieNameFromGlobalConfiguration(): string

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace JWeiland\Mediaconsent\DataProcessing;
 
 /*
@@ -9,80 +11,76 @@ namespace JWeiland\Mediaconsent\DataProcessing;
  * LICENSE file that was distributed with this source code.
  */
 
-use TYPO3\CMS\Core\Utility\GeneralUtility;
+use JWeiland\Mediaconsent\Traits\ProviderInitializationTrait;
+use JWeiland\Mediaconsent\Utility\SessionUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
-use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 
 /**
  * Class for data processing for the content element Mediaconsent Cns
  */
-class MediaconsentCnsProcessor implements DataProcessorInterface
+class MediaconsentCnsProcessor implements MediaconsentCnsProcessorInterface
 {
-    private $smcProviders = [];
+    use ProviderInitializationTrait;
 
-    /**
-     * Process data for the content element Mediaconsent Cns
-     * Data of the content element is already in $processedData['data']!
-     *
-     * @param ContentObjectRenderer $cObj The data of the content element or page
-     * @param array                 $contentObjectConfiguration The configuration of Content Object
-     * @param array                 $processorConfiguration The configuration of this processor
-     * @param array                 $processedData Key/value store of processed data (e.g. to be passed to a Fluid View)
-     *
-     * @return array the processed data as key/value store
-     */
+    private const MEDIA_CONSENT_PROVIDER = 'mediaconsent_smcprovider';
+    private const MEDIA_CONSENT_ITEM = 'mediaconsent_item';
+    private const NO_CONSENT = 0;
+    private const SESSION_IDENTIFIER = 'allowFromSource';
+
     public function process(
         ContentObjectRenderer $cObj,
         array $contentObjectConfiguration,
         array $processorConfiguration,
         array $processedData
     ): array {
-        $this->initProviders($processorConfiguration['cnProviders']);
-
         // read allowed content sources from session
-        $allowedSources = $GLOBALS['TSFE']->fe_user->getKey(
-            'ses',
-            'allowFromSource'
-        );
-        if (!is_array($allowedSources)) {
-            $allowedSources = [];
-        }
+        $allowedSources = $this->getMediaConsentAllowedSourcesFromSession($cObj);
+        $smcProviderNum = (int)$processedData['data'][self::MEDIA_CONSENT_PROVIDER];
 
-        $smcProviderNum = $processedData['data']['mediaconsent_smcprovider'];
+        $this->handleMediaConsentItem($cObj, $smcProviderNum, $allowedSources);
 
-        // do this only if a content element uid is arriving in mediaconsent_item:
-        // because this also means user has clicked to allow the content
-        if ((int)GeneralUtility::_GET('mediaconsent_item') > 0) {
-            // check if content provider exists in session, save if not
-            if (!in_array($smcProviderNum, $allowedSources)) {
-                array_push($allowedSources, $smcProviderNum);
-                $GLOBALS['TSFE']->fe_user->setKey(
-                    'ses',
-                    'allowFromSource',
-                    $allowedSources
-                );
-            }
-        }
-
-        if (in_array($smcProviderNum, $allowedSources)) {
-            $processedData['wrapperActive'] = 0;
-        } else {
-            $processedData['wrapperActive'] = 1;
-        }
-
+        $processedData['wrapperActive'] = in_array($smcProviderNum, $allowedSources, true) ? 0 : 1;
         $processedData['reloadPageType'] = $processorConfiguration['reloadPageType'];
         $processedData['smcProvider'] = $this->getSmcProvider($smcProviderNum);
 
         return $processedData;
     }
 
-    private function initProviders($smcProvidersString): void
+    private function handleMediaConsentItem(ContentObjectRenderer $cObj, int $smcProviderNum, array &$allowedSources): void
     {
-        $this->smcProviders = explode(',', $smcProvidersString);
+        // do this only if a content element uid is arriving in mediaconsent_item,
+        // because this also means user has clicked to allow the content
+        if ($this->getMediaConsentItemSetInRequest($cObj) && !in_array($smcProviderNum, $allowedSources, true)) {
+            // check if content provider exists in session, save if not
+            $allowedSources[] = $smcProviderNum;
+            $this->setMediaConsentAllowedSourcesToSession($cObj, $allowedSources);
+        }
     }
 
-    private function getSmcProvider($num): string
+    private function getMediaConsentAllowedSourcesFromSession(ContentObjectRenderer $cObj): array
     {
-        return $this->smcProviders[$num - 1] ?? '';
+        $allowedSources = SessionUtility::getFrontendSessionData($cObj->getRequest(), self::SESSION_IDENTIFIER);
+
+        return is_array($allowedSources) ? $allowedSources : [];
+    }
+
+    private function setMediaConsentAllowedSourcesToSession(ContentObjectRenderer $cObj, array $data): void
+    {
+        SessionUtility::setFrontendSessionData($cObj->getRequest(), self::SESSION_IDENTIFIER, $data);
+    }
+
+    private function getMediaConsentItemSetInRequest(ContentObjectRenderer $cObj): int
+    {
+        $mediaConsentItem = $this->getQueryParamFromContentObjectRenderer($cObj, self::MEDIA_CONSENT_ITEM);
+
+        return $mediaConsentItem ? (int)$mediaConsentItem : self::NO_CONSENT;
+    }
+
+    private function getQueryParamFromContentObjectRenderer(ContentObjectRenderer $cObj, string $paramName)
+    {
+        $request = $cObj->getRequest();
+        $queryParameters = $request->getQueryParams();
+
+        return $queryParameters[$paramName] ?? null;
     }
 }

@@ -1,9 +1,6 @@
 plugin.tx_mediaconsent.settings {
-
-    # cat=plugin.tx_mediaconsent/cText/1; type=; label=LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:constants.includejquery
-    loadJQuery = 1   
-
-    # cat=plugin.tx_mediaconsent/cText/1; type=; label=LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:constants.reloadPageType
-    reloadPageType = 122
-
+  # cat=plugin.tx_mediaconsent/cText/1; type=; label=LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:constants.includejquery
+  loadJQuery = 1
+  # cat=plugin.tx_mediaconsent/cText/1; type=; label=LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:constants.reloadPageType
+  reloadPageType = 122
 }

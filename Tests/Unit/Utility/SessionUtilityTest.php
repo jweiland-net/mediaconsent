@@ -11,13 +11,13 @@ declare(strict_types=1);
 
 namespace JWeiland\Mediaconsent\Tests\Unit\Utility;
 
-use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
 use JWeiland\Mediaconsent\Utility\SessionUtility;
 use TYPO3\CMS\Core\Session\UserSession;
 use TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication;
+use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
-class SessionUtilityTest extends TestCase
+class SessionUtilityTest extends UnitTestCase
 {
     /**
      * @test

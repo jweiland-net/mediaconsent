@@ -18,7 +18,7 @@ use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 /**
  * Class for data processing for the content element Mediaconsent Cns
  */
-class MediaconsentCnsProcessor implements MediaconsentCnsProcessorInterface
+class MediaConsentProcessor implements MediaConsentProcessorInterface
 {
     use ProviderInitializationTrait;
 

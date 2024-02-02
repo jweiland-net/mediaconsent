@@ -12,11 +12,11 @@ declare(strict_types=1);
 namespace JWeiland\Mediaconsent\Tests\Unit\DataProcessing;
 
 use PHPUnit\Framework\TestCase;
-use JWeiland\Mediaconsent\DataProcessing\MediaconsentCnsProcessor;
+use JWeiland\Mediaconsent\DataProcessing\MediaConsentProcessor;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
-
-class MediaconsentCnsProcessorTest extends TestCase
+class MediaconsentCnsProcessorTest extends UnitTestCase
 {
     /**
      * @test
@@ -36,7 +36,7 @@ class MediaconsentCnsProcessorTest extends TestCase
             ],
         ];
 
-        $processor = new MediaconsentCnsProcessor();
+        $processor = new MediaConsentProcessor();
         $result = $processor->process($cObj, [], ['reloadPageType' => 123], $processedData);
 
         // Assertions

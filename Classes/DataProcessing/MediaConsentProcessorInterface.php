@@ -16,6 +16,6 @@ use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 /**
  * Interface for data processing for the content element `mediaconsent` Cns
  */
-interface MediaconsentCnsProcessorInterface extends DataProcessorInterface
+interface MediaConsentProcessorInterface extends DataProcessorInterface
 {
 }

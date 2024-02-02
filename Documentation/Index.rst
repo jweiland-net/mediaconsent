@@ -3,15 +3,15 @@
 
 ..  _start:
 
-======================
-Mediaconsent Extension
-======================
+============
+Mediaconsent
+============
 
 :Extension key:
     mediaconsent
 
 :Package name:
-    Media Consent
+    jweiland/mediaconsent
 
 :Version:
     |release|

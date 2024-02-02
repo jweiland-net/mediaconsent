@@ -19,7 +19,7 @@ tt_content {
 
     templateName = Mediaconsent_cns.html
     dataProcessing {
-      1 = JWeiland\Mediaconsent\DataProcessing\MediaconsentCnsProcessor
+      1 = JWeiland\Mediaconsent\DataProcessing\MediaConsentProcessor
       1 {
         reloadPageType = {$plugin.tx_mediaconsent.settings.reloadPageType}
         cnProviders = Facebook,Instagram,Twitter,YouTube,Vimeo,SoundCloud,Other

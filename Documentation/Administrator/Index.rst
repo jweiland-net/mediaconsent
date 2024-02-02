@@ -38,7 +38,7 @@ If this is not the case, you have to configure manually the path to the jQuery l
 
     # Include JavaScript functions for reloading Content Element.
     # Assumes "page" as name for top level PAGE Object
-    page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/js/tx_mediaconsent.js
+    page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/js/mediaconsent.js
 
 For the jQuery library: If your website already makes use of it, you can disable the extension's own file by setting a constant, see below.
 

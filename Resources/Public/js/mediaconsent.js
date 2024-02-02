@@ -1,6 +1,6 @@
 const mcClickHandler = (event) => {
   const mcScpType = event.target.getAttribute('data-mctype');
-  const mcMediaconsentWrappers = document.querySelectorAll('.mediaconsent_wrapper[data-mctype="' + mcScpType + '"]');
+  const mcMediaconsentWrappers = document.querySelectorAll(`.mediaconsent_wrapper[data-mctype="${mcScpType}"]`);
   mcMediaconsentWrappers.forEach(mcMediaconsentWrapper => {
     mcNsp.reloadItem(mcMediaconsentWrapper);
   });
@@ -16,8 +16,9 @@ const mcNsp = (() => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
-          return response.text();
+          return response;
         })
+        .then(response => response.text())
         .then(text => {
           this.element.removeEventListener('click', mcClickHandler);
           this.element.innerHTML = text;
@@ -37,7 +38,9 @@ const mcNsp = (() => {
   };
 })();
 
-window.addEventListener('load', () => {
-  const mcMediaconsentWrapper = document.querySelector('.mediaconsent_wrapper');
-  mcMediaconsentWrapper.addEventListener('click', mcClickHandler);
+document.addEventListener('DOMContentLoaded', () => {
+  const mcMediaconsentWrappers = document.querySelectorAll('.mediaconsent_wrapper');
+  mcMediaconsentWrappers.forEach(mcMediaconsentWrapper => {
+    mcMediaconsentWrapper.addEventListener('click', mcClickHandler);
+  });
 });

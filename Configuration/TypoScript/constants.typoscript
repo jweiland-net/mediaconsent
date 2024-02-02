@@ -1,0 +1,4 @@
+plugin.tx_mediaconsent.settings {
+  # cat=plugin.tx_mediaconsent/cText/1; type=; label=LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:constants.reloadPageType
+  reloadPageType = 122
+}

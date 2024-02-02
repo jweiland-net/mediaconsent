@@ -1,21 +1,17 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
-.. include:: ../Includes.txt
+..  include:: /Includes.rst.txt
 
 
-.. _introduction:
+..  _introduction:
 
+============
 Introduction
 ============
 
 
-.. _what-it-does:
+..  _what-it-does:
 
 What does it do?
-----------------
+================
 
 This extension loads HTML content only after the user has clicked on a short note expressing his/her agreement to see it.
 
@@ -24,10 +20,10 @@ It is useful for embedding HTML snippets (often called widgets) from social medi
 The extension provides a new content element called "Media Consent Opt-In" which has two specific fields: one for the HTML snippet embedding the content, another for selecting the content provider (Facebook, Twitter...)
 
 
-.. _screenshots:
+..  _screenshots:
 
 Screenshots
------------
+===========
 
 .. figure:: ../Images/new_element.png
    :width: 500px

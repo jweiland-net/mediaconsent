@@ -8,19 +8,21 @@ tt_content {
     layoutRootPaths {
       10 = EXT:mediaconsent/Resources/Private/Layouts
     }
+
     partialRootPaths {
       10 = EXT:mediaconsent/Resources/Private/Partials
     }
+
     templateRootPaths {
       10 = EXT:mediaconsent/Resources/Private/Templates
     }
 
     templateName = Mediaconsent_cns.html
     dataProcessing {
-      1 = JWeiland\Mediaconsent\DataProcessing\MediaconsentCnsProcessor
+      1 = JWeiland\Mediaconsent\DataProcessing\MediaConsentProcessor
       1 {
-          reloadPageType = {$plugin.tx_mediaconsent.settings.reloadPageType}
-          cnProviders = Facebook,Instagram,Twitter,YouTube,Vimeo,SoundCloud,Other
+        reloadPageType = {$plugin.tx_mediaconsent.settings.reloadPageType}
+        cnProviders = Facebook,Instagram,Twitter,YouTube,Vimeo,SoundCloud,Other
       }
     }
   }
@@ -49,6 +51,7 @@ rldPage {
           intval = 1
           data = GP:mediaconsent_item
         }
+
         pidInList = 0
         where = {#CType} = "mediaconsent_cns"
       }
@@ -56,11 +59,6 @@ rldPage {
   }
 }
 
-# Include jQuery. Assumes "page" as name for top level PAGE Object
-[{$plugin.tx_mediaconsent.settings.loadJQuery} == 1]
-page.includeJSFooterlibs.jquery = EXT:mediaconsent/Resources/Public/js/jquery.min.js
-[end]
-
 # Include JavaScript functions for reloading Content Element.
 # Assumes "page" as name for top level PAGE Object
-page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/js/tx_mediaconsent.js
+page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/js/mediaconsent.js

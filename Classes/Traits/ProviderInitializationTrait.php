@@ -13,6 +13,7 @@ namespace JWeiland\Mediaconsent\Traits;
 
 use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\Exception\MissingArrayPathException;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * Trait for initializing providers from configuration
@@ -26,7 +27,7 @@ trait ProviderInitializationTrait
         try {
             $cnProviders = ArrayUtility::getValueByPath($processorConfiguration, 'cnProviders') ?? false;
             if ($cnProviders) {
-                $this->smcProviders = explode(',', $cnProviders);
+                $this->smcProviders = GeneralUtility::trimExplode(',', $cnProviders, true);
             }
         } catch (MissingArrayPathException $exception) {
             throw new \InvalidArgumentException('Missing the cnProviders key in processor configuration');

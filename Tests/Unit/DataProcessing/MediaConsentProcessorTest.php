@@ -16,7 +16,7 @@ use JWeiland\Mediaconsent\DataProcessing\MediaConsentProcessor;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
-class MediaconsentCnsProcessorTest extends UnitTestCase
+class MediaConsentProcessorTest extends UnitTestCase
 {
     /**
      * @test

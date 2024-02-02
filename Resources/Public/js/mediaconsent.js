@@ -1,40 +1,43 @@
-let clickHandler = function (event) {
-  let scpType = this.getAttribute('data-mctype');
-  let mediaconsentWrappers = document.querySelectorAll('.mediaconsent_wrapper[data-mctype="' + scpType + '"]');
-  mediaconsentWrappers.forEach(function (mediaconsentWrapper) {
-    mcNsp.reloadItem(mediaconsentWrapper);
+const mcClickHandler = (event) => {
+  const mcScpType = event.target.getAttribute('data-mctype');
+  const mcMediaconsentWrappers = document.querySelectorAll('.mediaconsent_wrapper[data-mctype="' + mcScpType + '"]');
+  mcMediaconsentWrappers.forEach(mcMediaconsentWrapper => {
+    mcNsp.reloadItem(mcMediaconsentWrapper);
   });
 };
 
-var mcNsp = (function () {
-  function MediaItem (element) {
+const mcNsp = (() => {
+  function McMediaItem(element) {
     this.element = element;
 
-    this.reload = function () {
-      let xhr = new XMLHttpRequest();
-      xhr.open('GET', this.element.getAttribute('data-mcuri'), true);
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          this.element.removeEventListener('click', clickHandler);
-          this.element.innerHTML = xhr.responseText;
-          this.element.addEventListener('click', clickHandler);
-        }
-      }.bind(this);
-      xhr.send();
+    this.reload = () => {
+      fetch(this.element.getAttribute('data-mcuri'))
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.text();
+        })
+        .then(text => {
+          this.element.removeEventListener('click', mcClickHandler);
+          this.element.innerHTML = text;
+          this.element.addEventListener('click', mcClickHandler);
+        })
+        .catch(error => {
+          console.error('There was a problem with the fetch operation:', error);
+        });
     };
   }
 
   return {
-    reloadItem: function (item) {
-      var mediaItem = new MediaItem(item);
-      mediaItem.reload();
+    reloadItem: (item) => {
+      const mcMediaItem = new McMediaItem(item);
+      mcMediaItem.reload();
     }
   };
 })();
 
-window.onload = function () {
-  var mediaconsentWrappers = document.getElementsByClassName('mediaconsent_wrapper');
-  Array.from(mediaconsentWrappers).forEach(function (mediaconsentWrapper) {
-    mediaconsentWrapper.addEventListener('click', clickHandler);
-  });
-};
+window.addEventListener('load', () => {
+  const mcMediaconsentWrapper = document.querySelector('.mediaconsent_wrapper');
+  mcMediaconsentWrapper.addEventListener('click', mcClickHandler);
+});

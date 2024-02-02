@@ -14,6 +14,9 @@ namespace JWeiland\Mediaconsent\Utility;
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication;
 
+/**
+ * SessionUtility Class for managing frontend user sessions
+ */
 class SessionUtility
 {
     private const FE_USER_ATTRIBUTE = 'frontend.user';
@@ -26,7 +29,7 @@ class SessionUtility
     public static function setFrontendSessionData(ServerRequestInterface $request, string $key, array $data): void
     {
         $frontendUserAuthentication = self::getFrontendUserAuthentication($request);
-        if ($frontendUserAuthentication) {
+        if ($frontendUserAuthentication instanceof FrontendUserAuthentication) {
             $userSession = $frontendUserAuthentication->getSession();
             $userSession->set($key, $data);
             $frontendUserAuthentication->storeSessionData();

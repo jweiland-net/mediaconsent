@@ -5,7 +5,7 @@
 [![License](http://poser.pugx.org/jweiland/mediaconsent/license)](https://packagist.org/packages/jweiland/mediaconsent)
 [![Total Downloads](https://poser.pugx.org/jweiland/mediaconsent/downloads.svg)](https://packagist.org/packages/jweiland/mediaconsent)
 [![Monthly Downloads](https://poser.pugx.org/jweiland/mediaconsent/d/monthly)](https://packagist.org/packages/jweiland/mediaconsent)
-
+![Build Status](https://github.com/jweiland-net/mediaconsent/actions/workflows/testscorev12.yml/badge.svg)
 
 [View documentation in detail](https://docs.typo3.org/p/jweiland/mediaconsent/master/en-us/)
 

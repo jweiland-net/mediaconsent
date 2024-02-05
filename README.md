@@ -7,7 +7,7 @@
 [![Monthly Downloads](https://poser.pugx.org/jweiland/mediaconsent/d/monthly)](https://packagist.org/packages/jweiland/mediaconsent)
 ![Build Status](https://github.com/jweiland-net/mediaconsent/actions/workflows/testscorev12.yml/badge.svg)
 
-[View documentation in detail](https://docs.typo3.org/p/jweiland/mediaconsent/master/en-us/)
+[View documentation in detail](https://docs.typo3.org/p/jweiland/mediaconsent/main/en-us/)
 
 This extension loads HTML content only after the user has clicked on a short note expressing his/her agreement to see it.
 

@@ -34,6 +34,14 @@ library and to the extension's JavaScript file. The default configuration coming
 with this extension is as follows (in setup.txt):
 
 ..  code-block:: typoscript
+<<<<<<< HEAD
+=======
+
+    # Include jQuery. Assumes "page" as name for top level PAGE Object
+    [globalVar = LIT:1 = {$plugin.tx_mediaconsent.settings.loadJQuery}]
+    page.includeJSFooterlibs.jquery = EXT:mediaconsent/Resources/Public/js/jquery.min.js
+    [end]
+>>>>>>> 20cc5b9 (Update indents in documentation)
 
     # Include JavaScript functions for reloading Content Element.
     # Assumes "page" as name for top level PAGE Object

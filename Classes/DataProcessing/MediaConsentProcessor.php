@@ -16,7 +16,7 @@ use JWeiland\Mediaconsent\Utility\SessionUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 /**
- * Class for data processing for the content element Mediaconsent Cns
+ * Class for data processing for the content element "mediaconsent"
  */
 class MediaConsentProcessor implements MediaConsentProcessorInterface
 {

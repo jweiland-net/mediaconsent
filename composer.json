@@ -1,15 +1,10 @@
 {
-    "name": "jweiland/mediaconsent",
-    "type": "typo3-cms-extension",
-    "description": "This TYPO3 extension makes sure that content is only loaded if the user agrees cookie consent",
-    "homepage": "https://github.com/jweiland-net/mediaconsent",
-    "keywords": [
-        "TYPO3 CMS",
-        "DSGVO",
-        "GDPR",
-        "front-end"
-    ],
-    "license": ["GPL-2.0-or-later"],
+	"name": "jweiland/mediaconsent",
+	"type": "typo3-cms-extension",
+	"description": "This TYPO3 extension makes sure that content is only loaded if the user agrees cookie consent",
+	"homepage": "https://jweiland.net",
+	"keywords": ["DSGVO", "GDPR", "mediaconsent", "consent", "cookie"],
+	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
 			"name": "Stefan Froemken",
@@ -22,30 +17,30 @@
 			"role": "Senior Developer"
 		}
 	],
-    "require": {
-        "typo3/cms-core": "^12.4"
-    },
-    "require-dev": {
+	"require": {
+		"typo3/cms-core": "^12.4"
+	},
+	"require-dev": {
 		"friendsofphp/php-cs-fixer": "^3.14",
 		"phpunit/phpunit": "^9.6",
 		"roave/security-advisories": "dev-latest",
 		"typo3/coding-standards": "^0.6",
 		"typo3/testing-framework": "^7.0.2"
-    },
-    "autoload": {
-        "psr-4": {
-            "JWeiland\\Mediaconsent\\": "Classes/"
-        }
-    },
+	},
+	"autoload": {
+		"psr-4": {
+			"JWeiland\\Mediaconsent\\": "Classes/"
+		}
+	},
 	"autoload-dev": {
 		"psr-4": {
 			"JWeiland\\Mediaconsent\\Tests\\": "Tests"
 		}
 	},
-    "replace": {
-        "arbkomekvw/mediaconsent": "self.version",
-        "typo3-ter/mediaconsent": "self.version"
-    },
+	"replace": {
+		"arbkomekvw/mediaconsent": "self.version",
+		"typo3-ter/mediaconsent": "self.version"
+	},
 	"config": {
 		"sort-packages": true,
 		"vendor-dir": ".Build/vendor",
@@ -55,10 +50,10 @@
 			"typo3/cms-composer-installers": true
 		}
 	},
-    "extra": {
-        "typo3/cms": {
-            "extension-key": "mediaconsent",
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "mediaconsent",
 			"web-dir": ".Build/public"
-        }
-    }
+		}
+	}
 }

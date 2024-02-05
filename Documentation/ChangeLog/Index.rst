@@ -15,6 +15,18 @@ Version 2.0.0
 *   All deprecated calls replaced
 *   Removed jQuery from TypoScript and rewrite the implementation with vanilla
     JavaScript
+*   Update path to mediaconsent.js to JavaScript dir
+*   Update html header in fluid templates
+*   Update indents in Resources/Private/*
+*   Remove unused imports
+*   Update format of ext_tables.sql
+*   Update homepage and keywords in composer.json
+*   Update indents in composer.json to tabs
+*   Add missing white space at end of file
+*   Remove Cns from class header
+*   Update link to documentation to main branch
+*   Add missing tic in README.md
+*   Remove .DS_Store
 
 Version 1.0.0
 =============

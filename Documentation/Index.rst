@@ -26,10 +26,10 @@ Mediaconsent
     Hoja Mustaffa Abdul Latheef
 
 :Email:
-   projects@jweiland.net
+    projects@jweiland.net
 
 :License:
-   This document is published under the
+    This document is published under the
     `Creative Commons BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`__
     license.
 
@@ -51,7 +51,6 @@ Manual covering TYPO3 extension mediaconent
     Introduction/Index
     User/Index
     Administrator/Index
-    KnownProblems/Index
     ChangeLog/Index
     Links
 

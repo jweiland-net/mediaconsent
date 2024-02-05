@@ -14,7 +14,7 @@ namespace JWeiland\Mediaconsent\DataProcessing;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 
 /**
- * Interface for data processing for the content element `mediaconsent` Cns
+ * Interface for data processing for the content element "mediaconsent"
  */
 interface MediaConsentProcessorInterface extends DataProcessorInterface
 {

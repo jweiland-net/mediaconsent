@@ -61,4 +61,4 @@ rldPage {
 
 # Include JavaScript functions for reloading Content Element.
 # Assumes "page" as name for top level PAGE Object
-page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/js/mediaconsent.js
+page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/JavaScript/mediaconsent.js

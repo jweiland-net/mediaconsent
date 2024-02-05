@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2018-09-20T13:45:00Z" product-name="mediaconsent">
-        <header/>
-        <body>
-            <trans-unit id="mediaconsent_cns.wizard.title">
-                <source>Media Content Opt-In</source>
-            </trans-unit>
-            <trans-unit id="mediaconsent_cns.wizard.description">
-                <source><![CDATA[Loads content only if user agrees]]></source>
-            </trans-unit>
-            <trans-unit id="tt_content.mediaconsent_smcprovider">
-                <source>Content Source</source>
-            </trans-unit>
-            <trans-unit id="tt_content.mediaconsent_smcprovider.I.0">
-                <source>Facebook</source>
-            </trans-unit>
-            <trans-unit id="tt_content.mediaconsent_smcprovider.I.1">
-                <source>Instagram</source>
-            </trans-unit>
-            <trans-unit id="tt_content.mediaconsent_smcprovider.I.2">
-                <source>Twitter</source>
-            </trans-unit>
-            <trans-unit id="tt_content.mediaconsent_smcprovider.I.3">
-                <source>YouTube</source>
-            </trans-unit>
-            <trans-unit id="tt_content.mediaconsent_smcprovider.I.4">
-                <source>Vimeo</source>
-            </trans-unit>
-            <trans-unit id="tt_content.mediaconsent_smcprovider.I.5">
-                <source>SoundCloud</source>
-            </trans-unit>
-            <trans-unit id="tt_content.mediaconsent_smcprovider.I.6">
-                <source>Other...</source>
-            </trans-unit>
-            <trans-unit id="fluidtemplate.consentmessage">
-                <source>Show content from %s</source>
-            </trans-unit>
-            <trans-unit id="fluidtemplate.consentmessage.others">
-                <source>Show content from third party provider.</source>
-            </trans-unit>
-            <trans-unit id="constants.includejquery">
-                <source>Include jQuery if not already present</source>
-            </trans-unit>
-            <trans-unit id="constants.reloadPageType">
-                <source>Page Type for reloading content elements</source>
-            </trans-unit>
-        </body>
-    </file>
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-09-20T13:45:00Z" product-name="mediaconsent">
+		<header/>
+		<body>
+			<trans-unit id="mediaconsent_cns.wizard.title">
+				<source>Media Content Opt-In</source>
+			</trans-unit>
+			<trans-unit id="mediaconsent_cns.wizard.description">
+				<source><![CDATA[Loads content only if user agrees]]></source>
+			</trans-unit>
+			<trans-unit id="tt_content.mediaconsent_smcprovider">
+				<source>Content Source</source>
+			</trans-unit>
+			<trans-unit id="tt_content.mediaconsent_smcprovider.I.0">
+				<source>Facebook</source>
+			</trans-unit>
+			<trans-unit id="tt_content.mediaconsent_smcprovider.I.1">
+				<source>Instagram</source>
+			</trans-unit>
+			<trans-unit id="tt_content.mediaconsent_smcprovider.I.2">
+				<source>Twitter</source>
+			</trans-unit>
+			<trans-unit id="tt_content.mediaconsent_smcprovider.I.3">
+				<source>YouTube</source>
+			</trans-unit>
+			<trans-unit id="tt_content.mediaconsent_smcprovider.I.4">
+				<source>Vimeo</source>
+			</trans-unit>
+			<trans-unit id="tt_content.mediaconsent_smcprovider.I.5">
+				<source>SoundCloud</source>
+			</trans-unit>
+			<trans-unit id="tt_content.mediaconsent_smcprovider.I.6">
+				<source>Other...</source>
+			</trans-unit>
+			<trans-unit id="fluidtemplate.consentmessage">
+				<source>Show content from %s</source>
+			</trans-unit>
+			<trans-unit id="fluidtemplate.consentmessage.others">
+				<source>Show content from third party provider.</source>
+			</trans-unit>
+			<trans-unit id="constants.includejquery">
+				<source>Include jQuery if not already present</source>
+			</trans-unit>
+			<trans-unit id="constants.reloadPageType">
+				<source>Page Type for reloading content elements</source>
+			</trans-unit>
+		</body>
+	</file>
 </xliff>

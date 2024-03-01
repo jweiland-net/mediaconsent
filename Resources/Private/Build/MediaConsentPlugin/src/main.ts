@@ -32,7 +32,11 @@ const htmlContent = `
             <a href="#">Media Consent CType</a>
           </h1>
           <label for="mcb-elem-1">
+<<<<<<< HEAD
             <input id="mcb-elem-1" class="mcb" type="checkbox" name="mcbProvider"/>
+=======
+            <input type="checkbox" name="mcb" id="mcb-elem-1">
+>>>>>>> cf80e61 (Vite Bundler pushed to repo)
             Show content from
           </label>
         </div>

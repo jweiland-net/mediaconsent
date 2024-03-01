@@ -1,32 +1,38 @@
-<html xmlns:mcse="http://ekvw.de/mcse" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:mcse="http://ekvw.de/mcse"
+      data-namespace-typo3-fluid="true">
 
-<div class="mediaconsent_element">
-    <f:if condition="{wrapperActive} = 1">
-        <f:then>
-            <f:render section="showWrapper" arguments="{pageType: reloadPageType, smcProvider: smcProvider, data: data}" />
-        </f:then>
-        <f:else>
-            <f:render section="showElement"  arguments="{data: data}" />
-        </f:else>
-    </f:if>
-</div>
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <div class="mediaconsent_element">
+        <f:if condition="{wrapperActive} = 1">
+            <f:then>
+                <f:render section="showWrapper" arguments="{pageType: reloadPageType, smcProvider: smcProvider, data: data}"/>
+            </f:then>
+            <f:else>
+                <f:render section="showElement" arguments="{data: data}"/>
+            </f:else>
+        </f:if>
+    </div>
+</f:section>
 
 <f:section name="showWrapper">
     <div class="mediaconsent_wrapper" data-mcuri="{f:uri.page(pageType: pageType, additionalParams: {mediaconsent_item: data.uid})}" data-mctype="{data.mediaconsent_smcprovider}">
-        <f:render partial="Header" arguments="{data: data}" />
+        <f:render partial="Header" arguments="{data: data}"/>
         <input type="checkbox" name="mcb{smcProvider}">
         <f:if condition="{data.mediaconsent_smcprovider} != 7">
             <f:then>
-                <f:translate key="LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:fluidtemplate.consentmessage" arguments="{0: smcProvider}" />
+                <f:translate key="LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:fluidtemplate.consentmessage" arguments="{0: smcProvider}"/>
             </f:then>
             <f:else>
-                <f:translate key="LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:fluidtemplate.consentmessage.others" />
+                <f:translate key="LLL:EXT:mediaconsent/Resources/Private/Language/locallang.xlf:fluidtemplate.consentmessage.others"/>
             </f:else>
         </f:if>
     </div>
 </f:section>
 
 <f:section name="showElement">
-    <f:render partial="Header" arguments="{data: data}" />
+    <f:render partial="Header" arguments="{data: data}"/>
     <f:format.raw>{data.bodytext}</f:format.raw>
 </f:section>

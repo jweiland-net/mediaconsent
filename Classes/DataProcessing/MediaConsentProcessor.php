@@ -33,6 +33,9 @@ class MediaConsentProcessor implements MediaConsentProcessorInterface
         array $processorConfiguration,
         array $processedData
     ): array {
+        // initialize providers from configuration
+        $this->initProvidersFromConfiguration($processorConfiguration);
+
         // read allowed content sources from session
         $allowedSources = $this->getMediaConsentAllowedSourcesFromSession($cObj);
         $smcProviderNum = (int)$processedData['data'][self::MEDIA_CONSENT_PROVIDER];

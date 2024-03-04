@@ -6,18 +6,19 @@ tt_content {
   mediaconsent_cns.10 {
 
     layoutRootPaths {
-      10 = EXT:mediaconsent/Resources/Private/Layouts
+      10 = EXT:mediaconsent/Resources/Private/Layouts/
     }
 
     partialRootPaths {
-      10 = EXT:mediaconsent/Resources/Private/Partials
+      10 = EXT:mediaconsent/Resources/Private/Partials/
     }
 
     templateRootPaths {
-      10 = EXT:mediaconsent/Resources/Private/Templates
+      10 = EXT:mediaconsent/Resources/Private/Templates/
     }
 
-    templateName = Mediaconsent_cns.html
+    templateName = MediaConsent.html
+
     dataProcessing {
       1 = JWeiland\Mediaconsent\DataProcessing\MediaConsentProcessor
       1 {
@@ -61,4 +62,4 @@ rldPage {
 
 # Include JavaScript functions for reloading Content Element.
 # Assumes "page" as name for top level PAGE Object
-page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/JavaScript/mediaconsent.js
+page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/JavaScript/MediaConsent.js

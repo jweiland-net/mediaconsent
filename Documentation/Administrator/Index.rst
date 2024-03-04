@@ -25,27 +25,16 @@ To install the extension, perform the following steps:
 
 ..  important::
 
-    This extensions adds a little JavaScript to the webpage and needs the jQuery
-    library. Therefore it assumes that the top-level TypoScript object of type
-    PAGE is named "page" as it is generally recommended.
-
-If this is not the case, you have to configure manually the path to the jQuery
-library and to the extension's JavaScript file. The default configuration coming
-with this extension is as follows (in setup.txt):
+    This extensions adds a little JavaScript to the webpage. Therefore it
+    assumes that the top-level TypoScript object of type PAGE is named "page" as
+    it is generally recommended.
 
 ..  code-block:: typoscript
 
-    # Include jQuery. Assumes "page" as name for top level PAGE Object
-    [globalVar = LIT:1 = {$plugin.tx_mediaconsent.settings.loadJQuery}]
-    page.includeJSFooterlibs.jquery = EXT:mediaconsent/Resources/Public/js/jquery.min.js
-    [end]
-
     # Include JavaScript functions for reloading Content Element.
     # Assumes "page" as name for top level PAGE Object
-    page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/JavaScript/mediaconsent.js
+    page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/JavaScript/MediaConsent.js
 
-For the jQuery library: If your website already makes use of it, you can disable
-the extension's own file by setting a constant, see below.
 
 Editing Constants
 =================

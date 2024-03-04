@@ -25,6 +25,14 @@ The extension provides a new content element called "Media Consent Opt-In" which
 has two specific fields: one for the HTML snippet embedding the content, another
 for selecting the content provider (Facebook, Twitter...)
 
+..  _template-layout:
+
+Template Layout
+===============
+
+The extension provides a new content element called "Media Consent Opt-In" which
+has two specific fields: one for the HTML snippet embedding the content, another
+for selecting the content provider (Facebook, Twitter...)
 
 ..  _screenshots:
 

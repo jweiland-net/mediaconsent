@@ -7,6 +7,14 @@
 ChangeLog
 =========
 
+Version 2.0.1
+=============
+
+*   [BUGFIX] Fixed issue that provider name not shown in the label
+*   [FEATURE] Vite bundler for javascript added in private folder
+*   [FEATURE] Bundler build files added to Public/JavaScript/MediaConsent.js
+*   Rename template name to MediaConsent.html
+
 Version 2.0.0
 =============
 

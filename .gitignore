@@ -32,6 +32,9 @@ nbproject
 .session
 *.log
 
+# Ignore mockServiceWorker.js
+Resources/Public/JavaScript/mockServiceWorker.js
+
 # Ignore composer stuff
 /composer.lock
 /composer.json.testing

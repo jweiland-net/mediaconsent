@@ -36,7 +36,7 @@ class MediaConsentProcessorTest extends UnitTestCase
         ];
 
         $processor = new MediaConsentProcessor();
-        $result = $processor->process($cObj, [], ['reloadPageType' => 123], $processedData);
+        $result = $processor->process($cObj, [], ['cnProviders' => '', 'reloadPageType' => 123], $processedData);
 
         // Assertions
         $this->assertEquals(1, $result['wrapperActive']);

@@ -30,8 +30,6 @@ for selecting the content provider (Facebook, Twitter...)
 Template Layout
 ===============
 
-=======
-
 The extension provides a new content element called "Media Consent Opt-In" which
 has two specific fields: one for the HTML snippet embedding the content, another
 for selecting the content provider (Facebook, Twitter...)

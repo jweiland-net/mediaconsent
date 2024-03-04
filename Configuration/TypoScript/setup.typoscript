@@ -17,7 +17,7 @@ tt_content {
       10 = EXT:mediaconsent/Resources/Private/Templates/
     }
 
-    templateName = MediaconsentContent.html
+    templateName = MediaConsent.html
     dataProcessing {
       1 = JWeiland\Mediaconsent\DataProcessing\MediaConsentProcessor
       1 {

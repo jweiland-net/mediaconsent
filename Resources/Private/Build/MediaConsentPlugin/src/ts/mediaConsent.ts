@@ -9,10 +9,8 @@ export class MediaConsent {
     if (!this.wrapper) {
       throw new Error('Parent wrapper with class "mediaconsent-wrapper" not found.');
     } else {
-      // @ts-ignore
-      this.uri = this.wrapper.dataset.mcuri;
-      // @ts-ignore
-      this.type = this.wrapper.dataset.mctype;
+      this.uri = this.wrapper.dataset.mcuri as string;
+      this.type = this.wrapper.dataset.mctype as string;
     }
     this.wrapper.addEventListener('click', this.clickHandler.bind(this));
   }
@@ -29,22 +27,26 @@ export class MediaConsent {
     this.reloadItem();
   };
 
-  reloadItem() {
-    // @ts-ignore
-    fetch(this.uri)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('MediaConsent: Failed to load consent content');
-        }
-        return response.text();
-      })
-      .then(text => {
-        // @ts-ignore
-        this.wrapper.innerHTML = text;
-      })
-      .catch(error => {
-        console.error('There is a problem with the fetch operation: ', error);
-      });
+  reloadItem () {
+    if (this.uri !== null) {
+      fetch(this.uri)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('MediaConsent: Failed to load consent content');
+          }
+          return response.text();
+        })
+        .then(text => {
+          if (this.wrapper !== null) {
+            this.wrapper.innerHTML = text;
+          } else {
+            console.error('Error: Wrapper element is null.');
+          }
+        })
+        .catch(error => {
+          console.error('There is a problem with the fetch operation: ', error);
+        });
+    }
   }
 }
 

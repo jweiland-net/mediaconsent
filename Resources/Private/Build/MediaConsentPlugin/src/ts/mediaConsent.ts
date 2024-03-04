@@ -49,11 +49,7 @@ export class MediaConsent {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-<<<<<<< HEAD
   const mediaCheckBoxs = document.querySelectorAll('.mcb');
-=======
-  const mediaCheckBoxs = document.querySelectorAll('[name="mcb"]');
->>>>>>> cf80e61 (Vite Bundler pushed to repo)
   mediaCheckBoxs.forEach(mediaCheckBox => {
     new MediaConsent(mediaCheckBox);
   });

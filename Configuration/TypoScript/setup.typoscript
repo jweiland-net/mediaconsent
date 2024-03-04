@@ -17,15 +17,8 @@ tt_content {
       10 = EXT:mediaconsent/Resources/Private/Templates/
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     templateName = MediaConsent.html
-=======
-    templateName = MediaconsentContent.html
->>>>>>> ffeff18 ([TASK] Configuration fix for template name correction)
-=======
-    templateName = MediaConsent.html
->>>>>>> a6cbada ([TASK] Resources/Private/Templates/MediaConsent.html template corrected)
+
     dataProcessing {
       1 = JWeiland\Mediaconsent\DataProcessing\MediaConsentProcessor
       1 {

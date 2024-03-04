@@ -49,7 +49,7 @@ export class MediaConsent {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const mediaCheckBoxs = document.querySelectorAll('[name="mcb"]');
+  const mediaCheckBoxs = document.querySelectorAll('.mcb');
   mediaCheckBoxs.forEach(mediaCheckBox => {
     new MediaConsent(mediaCheckBox);
   });

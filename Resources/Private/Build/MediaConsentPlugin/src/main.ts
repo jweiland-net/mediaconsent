@@ -32,7 +32,7 @@ const htmlContent = `
             <a href="#">Media Consent CType</a>
           </h1>
           <label for="mcb-elem-1">
-            <input type="checkbox" name="mcb" id="mcb-elem-1">
+            <input id="mcb-elem-1" class="mcb" type="checkbox" name="mcbProvider"/>
             Show content from
           </label>
         </div>

@@ -19,6 +19,12 @@ It is useful for embedding HTML snippets (often called widgets) from social medi
 
 The extension provides a new content element called "Media Consent Opt-In" which has two specific fields: one for the HTML snippet embedding the content, another for selecting the content provider (Facebook, Twitter...)
 
+..  _template-layout:
+
+Template Layout
+===============
+
+
 
 ..  _screenshots:
 

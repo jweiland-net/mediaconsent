@@ -6,10 +6,6 @@ const PORT = _config.server.port;
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
-
-
-// @ts-ignore
-// @ts-ignore
 export default defineConfig({
   build: {
     outDir: resolve(__dirname, '../../../Public/JavaScript'),

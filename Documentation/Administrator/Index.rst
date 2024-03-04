@@ -37,7 +37,15 @@ with this extension is as follows (in setup.txt):
 
     # Include JavaScript functions for reloading Content Element.
     # Assumes "page" as name for top level PAGE Object
+<<<<<<< HEAD
     page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/JavaScript/MediaConsent.js
+=======
+<<<<<<< HEAD
+    page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/JavaScript/mediaconsent.js
+=======
+    page.includeJSFooter.tx_mediaconsent = EXT:mediaconsent/Resources/Public/JavaScript/MediaConsent.js
+>>>>>>> 9864672 ([FEATURE] Documentation updates)
+>>>>>>> a0c387a ([FEATURE] Documentation updates)
 
 For the jQuery library: If your website already makes use of it, you can disable
 the extension's own file by setting a constant, see below.

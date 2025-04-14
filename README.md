@@ -2,7 +2,6 @@
 
 [![Latest Stable Version](https://poser.pugx.org/jweiland/mediaconsent/v/stable.svg)](https://packagist.org/packages/jweiland/mediaconsent)
 [![TYPO3 12.4](https://img.shields.io/badge/TYPO3-12.4-green.svg)](https://get.typo3.org/version/12)
-[![License](http://poser.pugx.org/jweiland/mediaconsent/license)](https://packagist.org/packages/jweiland/mediaconsent)
 [![Total Downloads](https://poser.pugx.org/jweiland/mediaconsent/downloads.svg)](https://packagist.org/packages/jweiland/mediaconsent)
 [![Monthly Downloads](https://poser.pugx.org/jweiland/mediaconsent/d/monthly)](https://packagist.org/packages/jweiland/mediaconsent)
 ![Build Status](https://github.com/jweiland-net/mediaconsent/actions/workflows/testscorev12.yml/badge.svg)

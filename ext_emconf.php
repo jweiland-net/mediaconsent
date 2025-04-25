@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of the package jweiland/mediaconsent.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Media Consent',
     'description' => 'Extension loads content only if the user agrees.',
@@ -12,6 +19,6 @@ $EM_CONF[$_EXTKEY] = [
     'constraints' => [
         'depends' => [
             'typo3' => '13.4.3-13.4.99',
-        ]
-    ]
+        ],
+    ],
 ];

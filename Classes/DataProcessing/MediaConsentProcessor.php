@@ -2,6 +2,13 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the package jweiland/mediaconsent.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace JWeiland\Mediaconsent\DataProcessing;
 
 /*
@@ -34,7 +41,7 @@ class MediaConsentProcessor implements MediaConsentProcessorInterface
         ContentObjectRenderer $cObj,
         array $contentObjectConfiguration,
         array $processorConfiguration,
-        array $processedData
+        array $processedData,
     ): array {
         // initialize providers from configuration
         $this->initProvidersFromConfiguration($processorConfiguration);

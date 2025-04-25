@@ -11,8 +11,8 @@ declare(strict_types=1);
 
 namespace JWeiland\Mediaconsent\Tests\Unit\Utility;
 
-use Psr\Http\Message\ServerRequestInterface;
 use JWeiland\Mediaconsent\Utility\SessionUtility;
+use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Session\UserSession;
 use TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -29,7 +29,7 @@ class SessionUtilityTest extends UnitTestCase
             ->method('getAttribute')
             ->willReturn(null);
 
-        $this->assertNull(SessionUtility::getFrontendSessionData($request, 'allowFromSource'));
+        self::assertNull(SessionUtility::getFrontendSessionData($request, 'allowFromSource'));
     }
 
     /**
@@ -45,7 +45,7 @@ class SessionUtilityTest extends UnitTestCase
         SessionUtility::setFrontendSessionData($request, 'allowFromSource', []);
 
         // Ensure that setAttribute method is not called when authentication is null
-        $this->assertNull(SessionUtility::getFrontendSessionData($request, 'allowFromSource'));
+        self::assertNull(SessionUtility::getFrontendSessionData($request, 'allowFromSource'));
     }
 
     /**
@@ -75,7 +75,7 @@ class SessionUtilityTest extends UnitTestCase
             ->method('storeSessionData');
 
         SessionUtility::setFrontendSessionData($request, 'allowFromSource', $testData);
-        $this->assertSame($session, $frontendUserAuthentication->getSession());
+        self::assertSame($session, $frontendUserAuthentication->getSession());
     }
 
     /**
@@ -85,7 +85,7 @@ class SessionUtilityTest extends UnitTestCase
     {
         $GLOBALS['TYPO3_CONF_VARS']['FE']['cookieName'] = '';
 
-        $this->assertEquals('fe_typo_user', SessionUtility::getFrontendCookieNameFromGlobalConfiguration());
+        self::assertEquals('fe_typo_user', SessionUtility::getFrontendCookieNameFromGlobalConfiguration());
     }
 
     /**
@@ -95,6 +95,6 @@ class SessionUtilityTest extends UnitTestCase
     {
         $GLOBALS['TYPO3_CONF_VARS']['FE']['cookieName'] = 'my_cookie_name';
 
-        $this->assertEquals('my_cookie_name', SessionUtility::getFrontendCookieNameFromGlobalConfiguration());
+        self::assertEquals('my_cookie_name', SessionUtility::getFrontendCookieNameFromGlobalConfiguration());
     }
 }

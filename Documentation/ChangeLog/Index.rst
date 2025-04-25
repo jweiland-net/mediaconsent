@@ -7,6 +7,11 @@
 ChangeLog
 =========
 
+Version 3.0.0
+=============
+
+*   [FEATURE] TYPO3 13 Compatibility Fixes and removed older version compatibilities
+
 Version 2.0.1
 =============
 

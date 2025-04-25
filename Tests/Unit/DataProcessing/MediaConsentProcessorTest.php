@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace JWeiland\Mediaconsent\Tests\Unit\DataProcessing;
 
+use Psr\Http\Message\ServerRequestInterface;
 use JWeiland\Mediaconsent\DataProcessing\MediaConsentProcessor;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -26,7 +27,7 @@ class MediaConsentProcessorTest extends UnitTestCase
         $cObj = $this->createMock(ContentObjectRenderer::class);
         $cObj->expects(self::atLeastOnce())
             ->method('getRequest')
-            ->willReturn($this->createMock(\Psr\Http\Message\ServerRequestInterface::class));
+            ->willReturn($this->createMock(ServerRequestInterface::class));
 
         // Mock processed data
         $processedData = [

@@ -23,8 +23,11 @@ class MediaConsentProcessor implements MediaConsentProcessorInterface
     use ProviderInitializationTrait;
 
     private const MEDIA_CONSENT_PROVIDER = 'mediaconsent_smcprovider';
+
     private const MEDIA_CONSENT_ITEM = 'mediaconsent_item';
+
     private const NO_CONSENT = 0;
+
     private const SESSION_IDENTIFIER = 'allowFromSource';
 
     public function process(

@@ -49,6 +49,7 @@ class SessionUtility
         if ($configCookieName === '') {
             return 'fe_typo_user';
         }
+
         return $configCookieName;
     }
 }

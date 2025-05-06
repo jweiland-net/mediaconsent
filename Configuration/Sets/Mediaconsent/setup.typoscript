@@ -1,3 +1,28 @@
+plugin.tx_mediaconsent {
+  view {
+    templateRootPaths {
+      0 = EXT:tx_mediaconsent/Resources/Private/Templates/
+      1 = {$mediaconsent.templateRootPath}
+    }
+    partialRootPaths {
+      0 = EXT:tx_mediaconsent/Resources/Private/Partials/
+      1 = {$mediaconsent.partialRootPath}
+    }
+    layoutRootPaths {
+      0 = EXT:tx_mediaconsent/Resources/Private/Layouts/
+      1 = {$mediaconsent.layoutRootPath}
+    }
+  }
+
+  persistence {
+    storagePid = {$mediaconsent.storagePid}
+  }
+
+  features {
+    skipDefaultArguments = 1
+  }
+}
+
 # Rendering Definition for mediaconsent content element
 tt_content {
   # COA_INT makes element non-cached
@@ -22,18 +47,17 @@ tt_content {
     dataProcessing {
       1 = JWeiland\Mediaconsent\DataProcessing\MediaConsentProcessor
       1 {
-        reloadPageType = {$plugin.tx_mediaconsent.settings.reloadPageType}
+        reloadPageType = {$mediaconsent.reloadPageType}
         cnProviders = Facebook,Instagram,Twitter,YouTube,Vimeo,SoundCloud,Other
       }
     }
   }
 }
 
-
 # Special Page type for reloading content element
 rldPage = PAGE
 rldPage {
-  typeNum = {$plugin.tx_mediaconsent.settings.reloadPageType}
+  typeNum = {$mediaconsent.reloadPageType}
 
   config {
     disableAllHeaderCode = 1

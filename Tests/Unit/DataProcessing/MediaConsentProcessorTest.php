@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace JWeiland\Mediaconsent\Tests\Unit\DataProcessing;
 
 use JWeiland\Mediaconsent\DataProcessing\MediaConsentProcessor;
+use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
@@ -26,7 +27,7 @@ class MediaConsentProcessorTest extends UnitTestCase
         $cObj = $this->createMock(ContentObjectRenderer::class);
         $cObj->expects(self::atLeastOnce())
             ->method('getRequest')
-            ->willReturn($this->createMock(\Psr\Http\Message\ServerRequestInterface::class));
+            ->willReturn($this->createMock(ServerRequestInterface::class));
 
         // Mock processed data
         $processedData = [
@@ -39,7 +40,7 @@ class MediaConsentProcessorTest extends UnitTestCase
         $result = $processor->process($cObj, [], ['cnProviders' => '', 'reloadPageType' => 123], $processedData);
 
         // Assertions
-        $this->assertEquals(1, $result['wrapperActive']);
-        $this->assertEquals(123, $result['reloadPageType']);
+        self::assertEquals(1, $result['wrapperActive']);
+        self::assertEquals(123, $result['reloadPageType']);
     }
 }

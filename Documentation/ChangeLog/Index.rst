@@ -7,6 +7,11 @@
 ChangeLog
 =========
 
+Version 3.0.1
+=============
+
+*   [BUGFIX] SiteSet identifier renamed by removing default
+
 Version 3.0.0
 =============
 

@@ -1,0 +1,10 @@
+{
+	"require": {
+		"ssch/typo3-rector": "^3.6"
+	},
+	"config": {
+		"bin-dir": ".Build/bin",
+		"sort-packages": true,
+		"vendor-dir": ".Build/vendor"
+	}
+}

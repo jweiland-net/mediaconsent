@@ -7,6 +7,17 @@
 ChangeLog
 =========
 
+Version 4.0.0
+=============
+
+*   [TASK] TYPO3 14 compatibility: updated constraints in composer.json and ext_emconf.php
+*   [TASK] Removed sys_template.php TCA override; Site Sets replace static template registration
+*   [TASK] Removed dead plugin.tx_mediaconsent TypoScript block with incorrect EXT:tx_mediaconsent/ paths
+*   [TASK] XLIFF files migrated to version 1.2 with proper xmlns and target-language attributes
+*   [TASK] Removed broken legacy Fluid template Mediaconsent_cns.html
+*   [TASK] All Fluid templates renamed to .fluid.html (Fluid v4 convention)
+*   [TASK] Fluid translate ViewHelpers updated to use translation domain syntax
+
 Version 3.0.1
 =============
 

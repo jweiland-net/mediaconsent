@@ -23,7 +23,7 @@ class MediaConsentProcessorTest extends UnitTestCase
     public function processReturnsProcessedDataWithWrapperActiveWhenMediaConsentItemIsSet(): void
     {
         $cObj = $this->createMock(ContentObjectRenderer::class);
-        $cObj->expects(self::atLeastOnce())
+        $cObj->expects($this->atLeastOnce())
             ->method('getRequest')
             ->willReturn($this->createMock(ServerRequestInterface::class));
 

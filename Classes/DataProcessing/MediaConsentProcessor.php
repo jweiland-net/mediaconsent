@@ -11,13 +11,6 @@ declare(strict_types=1);
 
 namespace JWeiland\Mediaconsent\DataProcessing;
 
-/*
- * This file is part of the package jweiland/mediaconsent.
- *
- * For the full copyright and license information, please read the
- * LICENSE file that was distributed with this source code.
- */
-
 use JWeiland\Mediaconsent\Traits\ProviderInitializationTrait;
 use JWeiland\Mediaconsent\Utility\SessionUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
@@ -25,7 +18,7 @@ use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 /**
  * Class for data processing for the content element "mediaconsent"
  */
-class MediaConsentProcessor implements MediaConsentProcessorInterface
+final class MediaConsentProcessor implements MediaConsentProcessorInterface
 {
     use ProviderInitializationTrait;
 
@@ -89,7 +82,7 @@ class MediaConsentProcessor implements MediaConsentProcessorInterface
         return $mediaConsentItem ? (int)$mediaConsentItem : self::NO_CONSENT;
     }
 
-    private function getQueryParamFromContentObjectRenderer(ContentObjectRenderer $cObj, string $paramName)
+    private function getQueryParamFromContentObjectRenderer(ContentObjectRenderer $cObj, string $paramName): mixed
     {
         $request = $cObj->getRequest();
         $queryParameters = $request->getQueryParams();

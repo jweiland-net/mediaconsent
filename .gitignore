@@ -38,3 +38,9 @@ Resources/Public/JavaScript/mockServiceWorker.js
 # Ignore composer stuff
 /composer.lock
 /composer.json.testing
+/packages/
+/var/
+
+# Ignore AI agent local files
+.antigravitycli/
+.antigravity-cli/

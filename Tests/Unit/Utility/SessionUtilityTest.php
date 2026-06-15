@@ -24,7 +24,7 @@ class SessionUtilityTest extends UnitTestCase
     public function getFrontendSessionDataReturnsNullIfFrontendUserAuthenticationIsNull(): void
     {
         $request = $this->createMock(ServerRequestInterface::class);
-        $request->expects(self::atLeastOnce())
+        $request->expects($this->atLeastOnce())
             ->method('getAttribute')
             ->willReturn(null);
 
@@ -35,7 +35,7 @@ class SessionUtilityTest extends UnitTestCase
     public function setFrontendSessionDataDoesNotSetDataIfFrontendUserAuthenticationIsNull(): void
     {
         $request = $this->createMock(ServerRequestInterface::class);
-        $request->expects(self::atLeastOnce())
+        $request->expects($this->atLeastOnce())
             ->method('getAttribute')
             ->willReturn(null);
 
@@ -51,21 +51,21 @@ class SessionUtilityTest extends UnitTestCase
         $frontendUserAuthentication = $this->createMock(FrontendUserAuthentication::class);
         $session = $this->createMock(UserSession::class);
 
-        $request->expects(self::atLeastOnce())
+        $request->expects($this->atLeastOnce())
             ->method('getAttribute')
             ->with('frontend.user')
             ->willReturn($frontendUserAuthentication);
 
-        $frontendUserAuthentication->expects(self::atLeastOnce())
+        $frontendUserAuthentication->expects($this->atLeastOnce())
             ->method('getSession')
             ->willReturn($session);
 
         $testData = ['testData' => 10];
-        $session->expects(self::atLeastOnce())
+        $session->expects($this->atLeastOnce())
             ->method('set')
             ->with('allowFromSource', $testData);
 
-        $frontendUserAuthentication->expects(self::atLeastOnce())
+        $frontendUserAuthentication->expects($this->atLeastOnce())
             ->method('storeSessionData');
 
         SessionUtility::setFrontendSessionData($request, 'allowFromSource', $testData);

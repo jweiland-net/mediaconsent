@@ -1,10 +1,15 @@
 {
 	"name": "jweiland/mediaconsent",
-	"type": "typo3-cms-extension",
 	"description": "This TYPO3 extension makes sure that content is only loaded if the user agrees cookie consent",
-	"homepage": "https://jweiland.net",
-	"keywords": ["DSGVO", "GDPR", "mediaconsent", "consent", "cookie"],
 	"license": "GPL-2.0-or-later",
+	"type": "typo3-cms-extension",
+	"keywords": [
+		"DSGVO",
+		"GDPR",
+		"mediaconsent",
+		"consent",
+		"cookie"
+	],
 	"authors": [
 		{
 			"name": "Stefan Froemken",
@@ -17,18 +22,19 @@
 			"role": "Senior Developer"
 		}
 	],
+	"homepage": "https://jweiland.net",
 	"require": {
 		"typo3/cms-core": "^14.0.0"
 	},
 	"require-dev": {
 		"ergebnis/composer-normalize": "^2.44",
-		"friendsofphp/php-cs-fixer": "^3.14",
-		"phpstan/phpdoc-parser": "^1.33",
-		"phpstan/phpstan": "^1.12",
-		"phpunit/phpunit": "^11.2.5",
-		"roave/security-advisories": "dev-latest",
+		"ssch/typo3-rector": "^3.6",
 		"typo3/coding-standards": "^0.8",
-		"typo3/testing-framework": "^9.0.1"
+		"typo3/testing-framework": "^9.2.0"
+	},
+	"replace": {
+		"arbkomekvw/mediaconsent": "self.version",
+		"typo3-ter/mediaconsent": "self.version"
 	},
 	"autoload": {
 		"psr-4": {
@@ -39,10 +45,6 @@
 		"psr-4": {
 			"JWeiland\\Mediaconsent\\Tests\\": "Tests"
 		}
-	},
-	"replace": {
-		"arbkomekvw/mediaconsent": "self.version",
-		"typo3-ter/mediaconsent": "self.version"
 	},
 	"config": {
 		"allow-plugins": {

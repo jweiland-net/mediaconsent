@@ -24,10 +24,13 @@
             <input id="mcb-{data.uid}" class="mcb" type="checkbox" name="mcb{smcProvider}"/>
             <f:if condition="{data.mediaconsent_smcprovider} != 7">
                 <f:then>
-                    <f:translate key="mediaconsent:fluidtemplate.consentmessage" arguments="{0: smcProvider}"/>
+                    <f:translate key="mediaconsent:fluidtemplate.consentmessage"
+                                 arguments="{0: smcProvider}"
+                                 extensionName="mediaconsent"/>
                 </f:then>
                 <f:else>
-                    <f:translate key="mediaconsent:fluidtemplate.consentmessage.others"/>
+                    <f:translate key="mediaconsent:fluidtemplate.consentmessage.others"
+                                 extensionName="mediaconsent"/>
                 </f:else>
             </f:if>
         </label>

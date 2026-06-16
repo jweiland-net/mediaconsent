@@ -1,28 +1,3 @@
-plugin.tx_mediaconsent {
-  view {
-    templateRootPaths {
-      0 = EXT:tx_mediaconsent/Resources/Private/Templates/
-      1 = {$mediaconsent.templateRootPath}
-    }
-    partialRootPaths {
-      0 = EXT:tx_mediaconsent/Resources/Private/Partials/
-      1 = {$mediaconsent.partialRootPath}
-    }
-    layoutRootPaths {
-      0 = EXT:tx_mediaconsent/Resources/Private/Layouts/
-      1 = {$mediaconsent.layoutRootPath}
-    }
-  }
-
-  persistence {
-    storagePid = {$mediaconsent.storagePid}
-  }
-
-  features {
-    skipDefaultArguments = 1
-  }
-}
-
 # Rendering Definition for mediaconsent content element
 tt_content {
   # COA_INT makes element non-cached
@@ -42,7 +17,7 @@ tt_content {
       10 = EXT:mediaconsent/Resources/Private/Templates/
     }
 
-    templateName = MediaConsent.html
+    templateName = MediaConsent
 
     dataProcessing {
       1 = JWeiland\Mediaconsent\DataProcessing\MediaConsentProcessor

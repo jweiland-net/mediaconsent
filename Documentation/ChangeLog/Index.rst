@@ -7,6 +7,11 @@
 ChangeLog
 =========
 
+Version 4.0.1
+=============
+
+*   [BUGFIX] Update js-yaml to version 4.3.0 and configure package.json overrides
+
 Version 4.0.0
 =============
 

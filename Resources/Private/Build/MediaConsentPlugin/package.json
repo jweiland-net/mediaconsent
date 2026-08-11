@@ -42,6 +42,6 @@
         "workerDirectory": "public"
     },
     "overrides": {
-        "js-yaml": "^4.3.0"
+        "js-yaml": "^4.3.1"
     }
 }
